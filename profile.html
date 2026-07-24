@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Follow Likers Pro - الملف الشخصي</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            background-color: #f4f4f4;
+            margin: 0;
+            font-family: Tahoma, sans-serif;
+            padding-bottom: 70px;
+        }
+        .header {
+            background-color: #d4af37;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .profile-container {
+            background: linear-gradient(135deg, #d4af37, #aa8c2c);
+            color: white;
+            padding: 25px 15px;
+            text-align: center;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .avatar {
+            width: 70px;
+            height: 70px;
+            background-color: white;
+            color: #d4af37;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            margin: 0 auto 10px auto;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+        }
+        .stats-box {
+            display: flex;
+            justify-content: space-around;
+            background: white;
+            margin: -20px 15px 15px 15px;
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            color: #333;
+        }
+        .stat-item {
+            text-align: center;
+        }
+        .stat-num {
+            font-size: 18px;
+            font-weight: bold;
+            color: #d4af37;
+            margin-bottom: 3px;
+        }
+        .stat-label {
+            font-size: 12px;
+            color: #777;
+        }
+        .menu-container {
+            padding: 0 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .menu-card {
+            background: white;
+            border-radius: 10px;
+            padding: 12px 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            text-decoration: none;
+            color: #333;
+            border-right: 4px solid #d4af37;
+        }
+        .menu-card div {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        .menu-card i {
+            color: #d4af37;
+            font-size: 18px;
+        }
+        /* شريط التنقل السفلي */
+        .nav-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #d4af37;
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+        }
+        .nav-item {
+            color: white;
+            text-align: center;
+            font-size: 12px;
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .nav-item i {
+            font-size: 20px;
+            margin-bottom: 3px;
+        }
+        .nav-item.active {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">الملف الشخصي</div>
+
+    <!-- صندوق معلومات المستخدم -->
+    <div class="profile-container">
+        <div style="font-size: 13px; opacity: 0.9;">مرحباً بك في FOLLOW LIKERS PRO</div>
+        <div class="avatar" style="margin-top: 10px;">
+            <i class="fas fa-bolt"></i>
+        </div>
+        <div style="font-size: 17px; font-weight: bold; display: flex; align-items: center; justify-content: center; gap: 5px;">
+            <i class="fas fa-check-circle" style="color: #fff; font-size: 15px;"></i>
+            MagedAtet
+        </div>
+        <div style="font-size: 11px; opacity: 0.8; margin-top: 3px;">معرف الحساب: 046601ea</div>
+    </div>
+
+    <!-- إحصائيات النقاط -->
+    <div class="stats-box">
+        <div class="stat-item">
+            <div class="stat-num">250</div>
+            <div class="stat-label">رصيد النقاط</div>
+        </div>
+        <div class="stat-item" style="border-right: 1px solid #eee; border-left: 1px solid #eee; padding: 0 20px;">
+            <div class="stat-num">15</div>
+            <div class="stat-label">المهام المنجزة</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-num">0</div>
+            <div class="stat-label">الإحالات</div>
+        </div>
+    </div>
+
+    <!-- خيارات القائمة -->
+    <div class="menu-container">
+        <a href="history.html" class="menu-card">
+            <div>
+                <i class="fas fa-history"></i>
+                سجل المعاملات
+            </div>
+            <i class="fas fa-chevron-left" style="font-size: 12px; color: #ccc;"></i>
+        </a>
+        <a href="tasks.html" class="menu-card">
+            <div>
+                <i class="fas fa-th-large"></i>
+                قائمة الأقسام والمهام
+            </div>
+            <i class="fas fa-chevron-left" style="font-size: 12px; color: #ccc;"></i>
+        </a>
+        <a href="security.html" class="menu-card">
+            <div>
+                <i class="fas fa-shield-alt"></i>
+                حماية الحساب والأمان
+            </div>
+            <i class="fas fa-chevron-left" style="font-size: 12px; color: #ccc;"></i>
+        </a>
+    </div>
+
+    <!-- شريط التنقل السفلي -->
+    <div class="nav-bar">
+        <a href="profile.html" class="nav-item active">
+            <i class="far fa-user"></i>
+            الملف الشخصي
+        </a>
+        <a href="history.html" class="nav-item">
+            <i class="fas fa-history"></i>
+            السجل
+        </a>
+        <a href="tasks.html" class="nav-item">
+            <i class="fas fa-th-large"></i>
+            الأقسام
+        </a>
+        <a href="index.html" class="nav-item">
+            <i class="fas fa-home"></i>
+            الرئيسية
+        </a>
+    </div>
+
+</body>
+</html>
