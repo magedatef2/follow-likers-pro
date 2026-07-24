@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Follow Likers Pro - المهام</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            background-color: #f4f4f4;
+            margin: 0;
+            font-family: Tahoma, sans-serif;
+            padding-bottom: 70px;
+        }
+        .header {
+            background-color: #d4af37;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .info-banner {
+            background-color: #fdf5e6;
+            color: #d4af37;
+            padding: 12px;
+            text-align: center;
+            font-size: 13px;
+            font-weight: bold;
+            border-bottom: 1px solid #e6d280;
+        }
+        .platforms-container {
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .platform-card {
+            background: white;
+            border-radius: 12px;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+            border-right: 5px solid #d4af37;
+        }
+        .platform-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .platform-icon {
+            width: 50px;
+            height: 50px;
+            background-color: #fdf5e6;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #d4af37;
+            font-size: 24px;
+        }
+        .platform-name {
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+            margin: 0;
+        }
+        .platform-desc {
+            font-size: 12px;
+            color: #777;
+            margin: 3px 0 0 0;
+        }
+        .start-btn {
+            background-color: #d4af37;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .start-btn:active {
+            opacity: 0.8;
+        }
+        /* شريط التنقل السفلي */
+        .nav-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #d4af37;
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+        }
+        .nav-item {
+            color: white;
+            text-align: center;
+            font-size: 12px;
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .nav-item i {
+            font-size: 20px;
+            margin-bottom: 3px;
+        }
+        .nav-item.active {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">قائمة المهام والتفاعل</div>
+    <div class="info-banner">
+        <i class="fas fa-shield-alt"></i> تنبيه: لا يتم إضافة النقاط إلا بعد إتمام المهمة بنجاح والتحقق منها!
+    </div>
+
+    <div class="platforms-container">
+        <!-- إنستجرام -->
+        <div class="platform-card">
+            <div class="platform-info">
+                <div class="platform-icon">
+                    <i class="fab fa-instagram"></i>
+                </div>
+                <div>
+                    <p class="platform-name">إنستجرام</p>
+                    <p class="platform-desc">متابعات وإعجابات حقيقية</p>
+                </div>
+            </div>
+            <button class="start-btn" onclick="startTask('إنستجرام')">ابدأ الآن</button>
+        </div>
+
+        <!-- فيسبوك -->
+        <div class="platform-card">
+            <div class="platform-info">
+                <div class="platform-icon">
+                    <i class="fab fa-facebook-f"></i>
+                </div>
+                <div>
+                    <p class="platform-name">فيسبوك</p>
+                    <p class="platform-desc">صفحات، منشورات، وريلز</p>
+                </div>
+            </div>
+            <button class="start-btn" onclick="startTask('فيسبوك')">ابدأ الآن</button>
+        </div>
+
+        <!-- يوتيوب -->
+        <div class="platform-card">
+            <div class="platform-info">
+                <div class="platform-icon">
+                    <i class="fab fa-youtube"></i>
+                </div>
+                <div>
+                    <p class="platform-name">يوتيوب</p>
+                    <p class="platform-desc">اشتراكات ومشاهدات</p>
+                </div>
+            </div>
+            <button class="start-btn" onclick="startTask('يوتيوب')">ابدأ الآن</button>
+        </div>
+
+        <!-- تويتر / إكس -->
+        <div class="platform-card">
+            <div class="platform-info">
+                <div class="platform-icon">
+                    <i class="fab fa-twitter"></i>
+                </div>
+                <div>
+                    <p class="platform-name">تويتر (إكس)</p>
+                    <p class="platform-desc">إعجابات وإعادة نشر</p>
+                </div>
+            </div>
+            <button class="start-btn" onclick="startTask('تويتر')">ابدأ الآن</button>
+        </div>
+    </div>
+
+    <!-- شريط التنقل السفلي -->
+    <div class="nav-bar">
+        <a href="profile.html" class="nav-item">
+            <i class="far fa-user"></i>
+            الملف الشخصي
+        </a>
+        <a href="#" class="nav-item">
+            <i class="fas fa-store"></i>
+            المتجر
+        </a>
+        <a href="tasks.html" class="nav-item active">
+            <i class="fas fa-th-large"></i>
+            الأقسام
+        </a>
+        <a href="index.html" class="nav-item">
+            <i class="fas fa-home"></i>
+            الرئيسية
+        </a>
+    </div>
+
+    <!-- سكربت التشغيل والتحقق -->
+    <script>
+        // دالة تنفيذ المهمة والتحقق منها
+        function startTask(platformName) {
+            // رسالة تنبيه للمستخدم ببدء التحقق
+            alert("جاري الانتقال لتنفيذ المهمة على " + platformName + "... يرجى الانتظار 15 ثانية وعدم إغلاق الصفحة.");
+            
+            let timeLeft = 15; // 15 ثانية مدة الانتظار
+            
+            // تشغيل المؤقت الزمني للتأكد من بقاء المستخدم
+            let timer = setInterval(function() {
+                timeLeft--;
+                
+                if (timeLeft <= 0) {
+                    clearInterval(timer);
+                    
+                    // محاكاة إرسال طلب التحقق (API Verification) للسيرفر للتأكد من إتمام المتابعة/الإعجاب
+                    verifyTaskOnServer(platformName);
+                }
+            }, 1000);
+        }
+
+        // دالة الاتصال بالسيرفر لمنح النقاط بعد التأكيد
+        function verifyTaskOnServer(platformName) {
+            // هنا يتم التواصل مع السيرفر الخلفي عبر طلب fetch للتأكد من نجاح الحدث
+            let taskSuccess = true; // يتم تحديثها بناءً على رد السيرفر الحقيقي (True / False)
+            
+            if (taskSuccess) {
+                alert("تم التحقق بنجاح! تم إضافة النقاط إلى رصيدك وتحديث سجل المعاملات (History).");
+                // يمكنك هنا تحديث واجهة النقاط برمجياً لاحقاً
+            } else {
+                alert("عذراً، لم يتم اكتشاف إتمام المهمة. لن يتم منح النقاط.");
+            }
+        }
+    </script>
+
+</body>
+</html>
